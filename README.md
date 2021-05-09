@@ -1,6 +1,12 @@
 # PHP İle Soap Servis İşlemleri 
 Örnek bir soap web servis kodlandı. Kodlanan web servise istemciler tarafında 
-nasıl istek atılacağı gösterildi.
+nasıl istek atılacağı gösterildi. 
+- Yapılan örnek çalışmaya ait wsdl dosyası : 
+<a href='http://okesmez.com/php-soap-v2/server.php?wsdl'>http://okesmez.com/php-soap-v2/server.php?wsdl</a>
+- Örnek client.php kodları
+<a href='https://github.com/ofke-yazilim/php-soap-v2/blob/main/client.php'>https://github.com/ofke-yazilim/php-soap-v2/blob/main/client.php</a>
+- Örnek client çıktısı : 
+<a href='http://okesmez.com/php-soap-v2/client.php'>http://okesmez.com/php-soap-v2/client.php</a>
 ## Server Tarafı 
 Soap servisin oluşturulduğu: yani istemcilere cevap veren taraftır. Bir soap web servisine ait tüm 
 tanımlamarı içeren `WSDL`dosyası server tarafında oluşturulmaktadır. Örnek bir WSDL dosyası aşağıdaki 
@@ -116,3 +122,6 @@ ornek fonksiyonu `ornekInput` adında **object** türünde bir girdi alıp, `orn
 oluşturup içerisinde ornek fonksiyonunu tanımladık. Sonrasında Tanımlamış olduğumuz bu Response class'ını soap server'a atamak için server.php adında bir
 dosya oluşturup gerekli gerekli standart tanımlamaları yaptık
 ([server.php içeriği için tıkla](https://github.com/ofke-yazilim/php-soap-v2/blob/main/server.php 'Server.php')).
+
+## Client üzerinde PHP ile servisin çağrılması.
+([örnek kullanım kodları için tıkla](https://github.com/ofke-yazilim/php-soap-v2/blob/main/client.php 'Client.php')).
