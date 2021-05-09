@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="OrnekServisi"
+      xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+      xmlns="http://schemas.xmlsoap.org/wsdl/"
+      xmlns:tns="http://okesmez.com/php-soap-v2/xml/ornek.wsdl"
+      targetNamespace="http://okesmez.com/php-soap-v2/xml/ornek.wsdl">
+
+      <types>
+        <schema targetNamespace = "http://okesmez.com/php-soap-v2/ornek.xsd"
+                xmlns = "http://www.w3.org/2000/10/XMLSchema">
+
+            <element name = "ornekInput">
+                <complexType>
+                    <all>
+                        <element name = "getData" type = "object"/>
+                    </all>
+                </complexType>
+            </element>
+
+            <element name = "ornekOutput">
+                <complexType>
+                    <all>
+                        <element name = "sendData" type = "object"/>
+                    </all>
+                </complexType>
+            </element>
+
+        </schema>
+      </types>
+
+      <message name = "ornekRequest">
+        <part name = "ornekInput" type = "xsd:ornekInput"/>
+      </message>
+
+      <message name = "ornekResponse">
+        <part name = "ornekOutput" type = "xsd:ornekOutput"/>
+      </message>
+
+      <portType name = "Ornek_PortType">
+        <operation name = "ornek">
+            <input message = "tns:ornekRequest"/>
+            <output message = "tns:ornekResponse"/>
+        </operation>
+      </portType>
+
+      <binding name = "Ornek_Binding" type = "tns:Ornek_PortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        <operation name = "ornek">
+            <soap:operation soapAction = "ornek"/>
+            <input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </input>
+
+            <output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </output>
+        </operation>
+      </binding>
+
+      <service name = "Ornek_Service">
+        <documentation>WSDL File for OrnekService</documentation>
+        <port binding = "tns:Ornek_Binding" name = "Ornek_Port">
+            <soap:address
+                    location = "http://okesmez.com/php-soap-v2/server.php" />
+        </port>
+      </service>
+</wsdl:definitions>
+
+
