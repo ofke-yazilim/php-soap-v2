@@ -113,4 +113,5 @@ ornek fonksiyonu `ornekInput` adında **object** türünde bir girdi alıp, `orn
 çıktı tanımlamalarınıda **message** etiketi altında yaptık.
 Şimdi php tarafında bir class oluşturup bu class içerisinde `ornek` fonksiyonunu tanımlayarak istediğimiz işlemleri gerçeklemeliyiz. Class/Response.php 
 oluşturup içerisinde ornek fonksiyonunu tanımladık. Sonrasında Tanımlamış olduğumuz bu Response class'ını soap server'a atamak için server.php adında bir
-dosya oluşturup gerekli gerekli standart tanımlamaları yaptık.
+dosya oluşturup gerekli gerekli standart tanımlamaları yaptık
+([server.php içeriği için tıkla](https://github.com/ofke-yazilim/php-soap-v2/blob/main/server.php 'Server.php')).
