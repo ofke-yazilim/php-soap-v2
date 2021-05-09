@@ -12,11 +12,7 @@ try {
     $ornekInput->name        = 'Omer';
     $ornekInput->second_name = 'Faruk';
     $ornekInput->phone       = '0000000000';
-
-    $data = array(
-       'ornekInput' => $ornekInput
-    );
-
+    
     $response = $client->ornek($ornekInput);
 
     echo "Metod basarili bir sekilde calistirildi.<br/>Sonuc asagidadir.<br/>";
