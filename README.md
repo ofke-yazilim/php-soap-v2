@@ -1,8 +1,17 @@
 # PHP İle Soap Servis İşlemleri 
-Örnek bir soap web servis kodlandı. Kodlanan web servise istemciler tarafında 
-nasıl istek atılacağı gösterildi. 
+Örnek bir soap web servis kodlandı. Bu web servis içerisinde `basic authentication` tanımlandı. <br><br>
+Basic Authentication Bilgileri :
+<pre>
+username : ornek
+password : ornek
+</pre> 
+Kodlanan web servise istemciler tarafında nasıl istek atılacağını aşağıda görebilirsiniz. 
 - Yapılan örnek çalışmaya ait wsdl dosyası : 
 <a href='http://okesmez.com/php-soap-v2/server.php?wsdl'>http://okesmez.com/php-soap-v2/server.php?wsdl</a>
+- Gönderilebilecek örnek bir request xml  : 
+<a href='http://okesmez.com/php-soap-v2/client.php?request'>http://okesmez.com/php-soap-v2/client.php?request</a>
+- Alınan  örnek bir response xml  : 
+<a href='http://okesmez.com/php-soap-v2/client.php?response'>http://okesmez.com/php-soap-v2/client.php?response</a>
 - Örnek client.php kodları
 <a href='https://github.com/ofke-yazilim/php-soap-v2/blob/main/client.php'>https://github.com/ofke-yazilim/php-soap-v2/blob/main/client.php</a>
 - Örnek client çıktısı : 
